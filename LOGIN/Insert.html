@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inserción</title>
+    <link rel="stylesheet" href="Insert.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/faviconInsertion.png" type="image/x-icon">
+
+</head>
+<body>
+    <h1>Data insertion</h1>
+    <form action="" method="post" id="miFormulario">
+        <!--campo de formulario de texto-->
+        <label for="nombre">Name: </label><br><!--for con el id-->
+        <input type="text" name="nombre" id="nombre"> <br><!--id para el front | name para el back-->
+        <div id="nombrehelp" style="visibility: hidden; color: red;">The name is mandatory</div> <br>
+
+        <label for="username">Username: </label><br><!--for con el id-->
+        <input type="text" name="username" id="username" > <br> <!--id para el front | name para el back-->
+        <div id="usernamehelp" style="visibility: hidden; color: red;">The username is not valid</div> <br>
+
+        <!--Campo de selecección entre múltiples valores simples-->
+        <label>Vocational training: </label>
+        <select name="ciclo" id="ciclo">
+            <option value="0">Elija un ciclo</option>
+            <option value="1">DAM</option>
+            <option value="2">DAW</option>
+            <option value="3">ASIR</option>
+            <option value="4">SMR</option>
+        </select> <br> 
+        <div id="ciclohelp" style="visibility: hidden; color: red;">You must select a vocational training</div> 
+
+        <label for="email">Email: </label> <br>
+        <input type="text" name="email" id="email">
+        <div id="emailhelp" style="visibility: hidden; color: red;">The email entered is not valid</div> 
+
+        <label for="edad">Age: </label><br>
+        <input type="number" name="edad" id="edad" size="2"> <br>
+        <div id="edadhelp" style="visibility: hidden; color: red;">Age must be over 15 (cant be over 110)</div> 
+
+        <label for="number">Phone number: </label> <br>
+        <input type="text" name="number" id="number">
+        <div id="numberHelp" style="visibility: hidden; color: red;">Number not valid</div>
+
+        
+        <label>Gender: </label>
+        <input type="radio" name="genero" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="genero" id="female" value="female">
+        <label for="female">Female</label> <br>
+        <div id="generohelp" style="visibility: hidden; color: red;">You must select a gender</div> 
+        <br>
+        
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label>Terms and conditions</label> <br>
+        <div id="checkboxhelp" style="visibility: hidden; color: red;">You must accept the terms and conditions</div> <br>
+        
+        
+
+        <input type="submit" value="Enviar"><!--imprescindivle para enviar al back-->
+        <!--<button type="submit">Enviar</button> alternativa para input submit-->
+
+
+    </form>
+    <script src="../js/JsInsert.js"></script>
+    
+</body>
+</html>

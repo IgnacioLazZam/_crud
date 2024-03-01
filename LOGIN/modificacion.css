@@ -1,0 +1,88 @@
+/*****************************************************/
+*{
+    font-family: 'Tektur', sans-serif; 
+}
+body{
+    background-image: url('../img/3px-tile.png');
+    background-color: #6b6a6a;
+    display: flex;
+    flex-direction: column;/*Para que se comporte en columna*/
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para que el contenido use el 100% del body*/
+}
+body h1{
+    max-width: 600px; /* Ancho máximo del formulario */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    border-radius: 7px;
+    background-color: rgba(255,255,255,0.13);
+    backdrop-filter: blur(20px); /* el filtro blur en background hace el glassmorfismo */
+    box-shadow: 0 0 10px 5px rgba(224, 224, 224, 0.4);
+}
+#miFormulario{
+    color: white;
+    padding: 20px;
+    width: 30%;
+    border-radius: 7px;
+    background-color: rgba(255,255,255,0.13) !important;
+    backdrop-filter: blur(20px); /* el filtro blur en background hace el glassmorfismo */
+    box-shadow: 0 0 10px 5px rgba(224, 224, 224, 0.4);
+}
+
+input{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    
+}
+
+input[type="text"]{
+    height: 20px;
+    width: 100%;
+    width: 90%;
+    padding: 1%;
+    
+}
+
+input[type="submit"]{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 2%;
+    cursor: pointer;
+    border: 1px solid white;
+}
+input[type="submit"]:hover{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    transition-duration: 1s;
+}
+input:required:after{
+    content: "*";
+}
+
+#edad {
+    width: 20%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 150px; /* Opcional: para limitar el ancho máximo del campo */
+}
+#email {
+    width: 100%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 200px; /* Opcional: para limitar el ancho máximo del campo */
+}
+#number {
+    width: 50%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 200px; /* Opcional: para limitar el ancho máximo del campo */
+}
+
+
+@media only screen and (max-width: 800px) {
+    #miFormulario{
+        width: 80% !important; /* Ocupar todo el ancho de la pantalla */
+    }
+    body h1{
+        width: 80% !important; /* Ocupar todo el ancho de la pantalla */
+    }
+}

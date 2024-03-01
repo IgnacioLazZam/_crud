@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Design by foolishdeveloper.com -->
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo-glass.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="../img/OIG-removebg-preview.png" type="image/x-icon">
+    <!--Stylesheet-->
+</head>
+<body>
+    <!--<div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>-->
+    <form method="post" action="" id="miFormulario"><!--He tenido que completar method y action-->
+        <h3>Login Here</h3>
+
+        <label for="username">Username: </label><!--for con el id-->
+        <input type="text" name="username" id="username" placeholder="Username" > <br> <!--id para el front | name para el back-->
+        <div id="usernamehelp" style="visibility: hidden; color: red;">Invalid username</div> <br>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="pass"> <br><!--Poner name-->
+        <div id="passwordHelp" style="visibility: hidden; color: red;">Invalid password</div> 
+
+        <button class="login" type="submit">Log In</button><!--Poner type="submit"-->
+        
+    </form>
+    <script src="../js/JsLogin.js"></script>
+    
+</body>
+</html>
