@@ -13,16 +13,16 @@
     <form action="" method="post" id="miFormulario">
         <!--campo de formulario de texto-->
         <label for="nombre">Name: </label><br><!--for con el id-->
-        <input type="text" value="Ignacio" name="nombre" id="nombre"> <br><!--id para el front | name para el back-->
+        <input onchange="checkField('nombre','nombrehelp')" type="text" value="Ignacio" name="nombre" id="nombre"> <br><!--id para el front | name para el back-->
         <div id="nombrehelp" style="visibility: hidden; color: red;">The name is mandatory</div> <br>
 
         <label for="username">Username: </label><br><!--for con el id-->
-        <input type="text" value="Chito1811" name="username" id="username" > <br> <!--id para el front | name para el back-->
+        <input onchange="checkField('username','usernamehelp')" type="text" value="Chito1811" name="username" id="username" > <br> <!--id para el front | name para el back-->
         <div id="usernamehelp" style="visibility: hidden; color: red;">The username is not valid</div> <br>
 
         <!--Campo de selecección entre múltiples valores simples-->
         <label>Vocational training: </label>
-        <select name="ciclo" id="ciclo">
+        <select onchange="checkField('ciclo','ciclohelp')" name="ciclo" id="ciclo">
             <option value="0">Elija un ciclo</option>
             <option value="1" selected>DAM</option>
             <option value="2">DAW</option>
@@ -32,27 +32,27 @@
         <div id="ciclohelp" style="visibility: hidden; color: red;">You must select a vocational training</div> 
 
         <label for="email">Email: </label> <br>
-        <input type="text" value="ilazazam1811@g.educaand.es" name="email" id="email">
+        <input onchange="checkField('email','emailhelp')" type="text" value="ilazazam1811@g.educaand.es" name="email" id="email">
         <div id="emailhelp" style="visibility: hidden; color: red;">The email entered is not valid</div> 
 
         <label for="edad">Age: </label><br>
-        <input type="number" value="18" name="edad" id="edad" size="2"> <br>
+        <input onchange="checkField('edad','edadhelp')" type="number" value="18" name="edad" id="edad" size="2"> <br>
         <div id="edadhelp" style="visibility: hidden; color: red;">Age must be over 15 (cant be over 110)</div> 
 
         <label for="number">Phone number: </label> <br>
-        <input type="text" value="633394668" name="number" id="number">
+        <input onchange="checkField('number','numberHelp')" type="text" value="633394668" name="number" id="number">
         <div id="numberHelp" style="visibility: hidden; color: red;">Number not valid</div>
 
         
         <label>Gender: </label>
-        <input type="radio" name="genero" id="male" value="male" checked>
+        <input onchange="checkField('genero','generohelp')" type="radio" name="genero" id="male" value="male" checked>
         <label for="male">Male</label>
-        <input type="radio" name="genero" id="female" value="female">
+        <input onchange="checkField('genero','generohelp')" type="radio" name="genero" id="female" value="female">
         <label for="female">Female</label> <br>
         <div id="generohelp" style="visibility: hidden; color: red;">You must select a gender</div> 
         <br>
         
-        <input type="checkbox" name="checkbox" id="checkbox" checked>
+        <input onchange="checkField('checkbox','checkboxhelp')" type="checkbox" name="checkbox" id="checkbox" checked>
         <label>Terms and conditions</label> <br>
         <div id="checkboxhelp" style="visibility: hidden; color: red;">You must accept the terms and conditions</div> <br>
         

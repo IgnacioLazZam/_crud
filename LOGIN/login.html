@@ -3,6 +3,7 @@
 <head>
     <!-- Design by foolishdeveloper.com -->
     <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo-glass.css">
@@ -19,15 +20,20 @@
         <div class="shape"></div>
     </div>-->
     <form method="post" action="" id="miFormulario"><!--He tenido que completar method y action-->
-        <h3>Login Here</h3>
+        <h3>Login Here <br> <br></h3>
 
         <label for="username">Username: </label><!--for con el id-->
-        <input type="text" name="username" id="username" placeholder="Username" > <br> <!--id para el front | name para el back-->
-        <div id="usernamehelp" style="visibility: hidden; color: red;">Invalid username</div> <br>
+        <input onchange="checkField('username','usernamehelp')" type="text" name="username" id="username" placeholder="Username" > <!--id para el front | name para el back-->
+        <div id="usernamehelp" style="visibility: hidden; color: red;">Invalid username. <br> <br>
+            - Usename length: 8-12 characters.
+            </div> <br>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="pass"> <br><!--Poner name-->
-        <div id="passwordHelp" style="visibility: hidden; color: red;">Invalid password</div> 
+        <input onchange="checkField('password','passwordHelp')" type="password" placeholder="Password" id="password" name="pass"><!--Poner name-->
+        <div id="passwordHelp" style="visibility: hidden; color: red;">Invalid password. <br><br>
+            - Password length: 8-15 characters <br>
+            - Must contain one number. <br>
+            - Must contain one upper and lower case letter.</div> 
 
         <button class="login" type="submit">Log In</button><!--Poner type="submit"-->
         

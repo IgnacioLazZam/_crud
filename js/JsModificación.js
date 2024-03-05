@@ -124,3 +124,15 @@ document.getElementById("miFormulario").addEventListener("submit", function(even
         document.getElementById('number').style.borderColor="white"
     }
 });
+function checkField(inputId, helpId) {
+    var input = document.getElementById(inputId);
+    var help = document.getElementById(helpId);
+
+    if (input.value === "" ) {
+        help.style.visibility = "visible";
+        input.style.borderColor = "red"
+    } else {
+        help.style.visibility = "hidden";
+        input.style.borderColor = "white"
+    }
+}

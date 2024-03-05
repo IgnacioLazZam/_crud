@@ -58,11 +58,11 @@ document.getElementById("miFormulario").addEventListener("submit", function(even
         event.preventDefault();
     } else {
         generoHelp.style.visibility = "hidden";  
-        document.getElementById('genero').style.borderColor="white"
     }
     
 
-});
+}); /**Al salirme el error no se me quita cuando selecciono una opción */   
+
 
 document.getElementById("miFormulario").addEventListener("submit", function(event) {
     var checkboxHelp = document.getElementById("checkboxhelp");
@@ -124,3 +124,17 @@ document.getElementById("miFormulario").addEventListener("submit", function(even
         document.getElementById('number').style.borderColor="white"
     }
 });
+
+function checkField(inputId, helpId) {
+    var input = document.getElementById(inputId);
+    var help = document.getElementById(helpId);
+
+    if (input.value === "") {
+        help.style.visibility = "visible";
+        input.style.borderColor = "red"
+    } else {
+        help.style.visibility = "hidden";
+        input.style.borderColor = "white"
+    }
+}
+
